@@ -12,13 +12,15 @@ export default function LogoutButton() {
   const handleLogout = async () => {
     try {
       await logoutUser()
-    } catch {
-      // ignore backend logout error
-    }
+    } catch {}
 
     dispatch(clearAuth())
     router.push("/login")
   }
 
-  return <button onClick={handleLogout}>Logout</button>
+  return (
+    <button className="button-secondary" onClick={handleLogout}>
+      Sign Out
+    </button>
+  )
 }

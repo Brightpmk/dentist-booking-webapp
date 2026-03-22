@@ -17,12 +17,8 @@ export default function RegisterPage() {
   const [message, setMessage] = useState("")
 
   useEffect(() => {
-    if (auth.isLoggedIn) {
-      if (auth.user?.role === "admin") {
-        router.push("/admin")
-      } else {
-        router.push("/booking")
-      }
+    if (auth.isLoggedIn && auth.user) {
+      router.push(auth.user.role === "admin" ? "/admin" : "/booking")
     }
   }, [auth, router])
 
@@ -38,7 +34,7 @@ export default function RegisterPage() {
         password,
       })
 
-      setMessage("Register successful")
+      setMessage("Account created successfully")
       router.push("/login")
     } catch (error) {
       if (error instanceof Error) {
@@ -50,55 +46,97 @@ export default function RegisterPage() {
   }
 
   return (
-    <div>
-      <h1>Register Page</h1>
+    <main className="site-shell">
+      <div className="split-layout">
+        <section className="auth-side">
+          <div>
+            <div className="eyebrow">New account</div>
+            <h1>
+              Create your
+              <br />
+              patient access.
+            </h1>
+            <p>
+              Register once to access the clinic system, select a dentist, and
+              manage your personal dental booking.
+            </p>
 
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Name</label>
-          <br />
-          <input
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            type="text"
-          />
-        </div>
+            <div className="auth-facts">
+              <div className="auth-fact">Secure account registration</div>
+              <div className="auth-fact">One user, one booking rule</div>
+              <div className="auth-fact">Ready for dentist selection flow</div>
+            </div>
+          </div>
 
-        <div>
-          <label>Telephone Number</label>
-          <br />
-          <input
-            value={telephoneNumber}
-            onChange={(e) => setTelephoneNumber(e.target.value)}
-            type="text"
-          />
-        </div>
+          <p className="body-sm">Dentaire Clinic System</p>
+        </section>
 
-        <div>
-          <label>Email</label>
-          <br />
-          <input
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            type="email"
-          />
-        </div>
+        <section className="auth-main">
+          <div className="auth-card">
+            <h2>Create Account</h2>
+            <p>Set up your account to begin using the dental booking system.</p>
 
-        <div>
-          <label>Password</label>
-          <br />
-          <input
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            type="password"
-          />
-        </div>
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label className="form-label">Full name</label>
+                <input
+                  className="input"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  type="text"
+                />
+              </div>
 
-        <br />
-        <button type="submit">Register</button>
-      </form>
+              <div className="form-group">
+                <label className="form-label">Telephone number</label>
+                <input
+                  className="input"
+                  value={telephoneNumber}
+                  onChange={(e) => setTelephoneNumber(e.target.value)}
+                  type="text"
+                />
+              </div>
 
-      <p>{message}</p>
-    </div>
+              <div className="form-group">
+                <label className="form-label">Email</label>
+                <input
+                  className="input"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="email"
+                />
+              </div>
+
+              <div className="form-group">
+                <label className="form-label">Password</label>
+                <input
+                  className="input"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                />
+              </div>
+
+              <button className="button" type="submit">
+                Create Account
+              </button>
+            </form>
+
+            {message && (
+              <p
+                className="message"
+                style={{
+                  color: message.toLowerCase().includes("failed")
+                    ? "var(--danger)"
+                    : "var(--success)",
+                }}
+              >
+                {message}
+              </p>
+            )}
+          </div>
+        </section>
+      </div>
+    </main>
   )
 }
