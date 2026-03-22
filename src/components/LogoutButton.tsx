@@ -13,7 +13,7 @@ export default function LogoutButton() {
     try {
       await logoutUser()
     } catch {
-      // ถึง backend logout fail ก็ยังล้างฝั่ง frontend
+      // ignore backend logout error
     }
 
     dispatch(clearAuth())

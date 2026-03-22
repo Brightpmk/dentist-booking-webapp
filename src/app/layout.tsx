@@ -1,4 +1,5 @@
 import Providers from "../providers/Providers"
+import TopMenu from "../components/TopMenu"
 
 export default function RootLayout({
   children,
@@ -8,7 +9,10 @@ export default function RootLayout({
   return (
     <html>
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+          <TopMenu />
+          {children}
+        </Providers>
       </body>
     </html>
   )
