@@ -482,3 +482,156 @@ body::before {
 .accent-text {
   color: #c45a2d;
 }
+
+.dentist-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.dentist-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.dentist-instruction {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+
+.dentist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+
+.dentist-card {
+  border: 1.5px solid rgba(176, 137, 104, 0.12);
+  border-radius: 2.5rem;
+  padding: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.dentist-card:hover {
+  transform: translateY(-5px);
+  background: rgba(176, 137, 104, 0.12);
+}
+
+.dentist-image-frame {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.dentist-image-frame img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 1.8rem;
+}
+
+.dentist-info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.dentist-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.dentist-year {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.dentist-details {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 5px 0 0 5px;
+}
+
+.booking-item-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.booking-item-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  border-color: #1e2f44;
+}
+
+.dentist-info-small {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dentist-info-small .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  object-fit: cover;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit {
+  background: #1e2f44;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 2rem;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: #fff;
+  color: #ff4d4f;
+  border: 1px solid #ff4d4f;
+  padding: 8px 16px;
+  border-radius: 2rem;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #ff4d4f;
+  color: white;
+}
+
+.admin-badge {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 4px 12px;
+  border-radius: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+}

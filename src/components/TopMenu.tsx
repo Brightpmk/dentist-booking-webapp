@@ -44,6 +44,18 @@ export default function TopMenu() {
               Operations
             </Link>
           )}
+
+          <Link className="nav-link" href="/dentists">
+                Meet Our Dentists
+            </Link>
+
+          
+          {auth.isLoggedIn && (
+            <Link className="nav-link" href="/appointment">
+              Make an appointment
+            </Link>
+          )}
+          
         </nav>
 
         <div className="nav-right">
