@@ -22,7 +22,6 @@ export async function registerUser(
   if (!response.ok) {
     throw new Error(data.message || data.msg || "Register failed")
   }
-
   return data
 }
 
@@ -42,7 +41,6 @@ export async function loginUser(
   if (!response.ok) {
     throw new Error(data.message || data.msg || "Login failed")
   }
-
   return data
 }
 
@@ -76,3 +74,4 @@ export async function logoutUser() {
 
   return data
 }
+

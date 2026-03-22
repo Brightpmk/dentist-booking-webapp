@@ -1,18 +1,30 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { loginUser, getMe } from "../../libs/auth"
 import { setAuthData } from "../../redux/features/authSlice"
+import { RootState } from "../../redux/store"
 
 export default function LoginPage() {
   const router = useRouter()
   const dispatch = useDispatch()
+  const auth = useSelector((state: RootState) => state.auth)
 
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [message, setMessage] = useState("")
+
+  useEffect(() => {
+    if (auth.isLoggedIn && auth.user) {
+      if (auth.user.role === "admin") {
+        router.push("/admin")
+      } else {
+        router.push("/booking")
+      }
+    }
+  }, [auth, router])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
