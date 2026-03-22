@@ -37,7 +37,7 @@ export default function HomePage() {
                   ? role === "admin"
                     ? "You are signed in as admin. Continue to clinic operations."
                     : "You are signed in as a patient. Continue to your booking page."
-                  : "Create an account or sign in to manage your dental booking securely."}
+                  : "Create an account or log in to manage your dental booking securely."}
               </p>
 
               <div className="divider-space" />
@@ -45,7 +45,7 @@ export default function HomePage() {
               {!isLoggedIn ? (
                 <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                   <Link href="/login">
-                    <button className="button">Sign In</button>
+                    <button className="button">log In</button>
                   </Link>
                   <Link href="/register">
                     <button className="button-secondary">Create Account</button>

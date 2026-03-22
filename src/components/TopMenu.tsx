@@ -25,7 +25,7 @@ export default function TopMenu() {
           {!auth.isLoggedIn && (
             <>
               <Link className="nav-link" href="/login">
-                Sign In
+                Log-in
               </Link>
               <Link className="nav-link" href="/register">
                 Create Account

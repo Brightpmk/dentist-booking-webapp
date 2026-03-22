@@ -54,13 +54,13 @@ export default function LoginPage() {
           <div>
             <div className="eyebrow">Patient and admin access</div>
             <h1>
-              Sign in to
+              Log-in to
               <br />
               continue.
             </h1>
             <p>
               Access your dental booking account or clinic administration area
-              through a clear and secure role-based sign-in flow.
+              through a clear and secure role-based Log-in flow.
             </p>
 
             <div className="auth-facts">
@@ -75,7 +75,7 @@ export default function LoginPage() {
 
         <section className="auth-main">
           <div className="auth-card">
-            <h2>Sign In</h2>
+            <h2>Log-in</h2>
             <p>Enter your account details to access the dental booking system.</p>
 
             <form onSubmit={handleSubmit}>
