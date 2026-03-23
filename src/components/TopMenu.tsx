@@ -1,12 +1,12 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useSelector } from "react-redux"
-import { RootState } from "../redux/store"
-import LogoutButton from "./LogoutButton"
+import Link from "next/link";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import LogoutButton from "./LogoutButton";
 
 export default function TopMenu() {
-  const auth = useSelector((state: RootState) => state.auth)
+  const auth = useSelector((state: RootState) => state.auth);
 
   return (
     <header className="topbar">
@@ -46,32 +46,29 @@ export default function TopMenu() {
           )}
 
           <Link className="nav-link" href="/dentists">
-                Meet Our Dentists
-            </Link>
+            Meet Our Dentists
+          </Link>
 
-          
           {auth.isLoggedIn && (
             <Link className="nav-link" href="/appointment">
               Make an appointment
             </Link>
           )}
-          
         </nav>
 
         <div className="nav-right">
           {auth.isLoggedIn && auth.user ? (
             <>
-              <div className="user-chip">
-                <div>
-                  <div className="font-serif">
-                    {auth.user.name}
-                  </div>
-
-                  <div className="user-role font-serif-italic accent-text">
-                    {auth.user.role}
+              <Link href="/profile" style={{ textDecoration: "none" }}>
+                <div className="user-chip">
+                  <div>
+                    <div className="font-serif">{auth.user.name}</div>
+                    <div className="user-role font-serif-italic accent-text">
+                      {auth.user.role}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
               <LogoutButton />
             </>
           ) : (
@@ -80,5 +77,5 @@ export default function TopMenu() {
         </div>
       </div>
     </header>
-  )
+  );
 }
