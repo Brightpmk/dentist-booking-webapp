@@ -51,7 +51,7 @@ export default function TopMenu() {
 
           {auth.isLoggedIn && (
             <Link className="nav-link" href="/appointment">
-              Make an appointment
+              Book Appointment
             </Link>
           )}
         </nav>

@@ -46,7 +46,7 @@ export default function DentistsPage() {
     <main className="site-shell">
       <div className="dentist-container">
         
-        <h1 className="dentist-title">OUR DENTIST TEAMS</h1>
+        <h1 className="dentist-title">MEET OUR DENTISTS</h1>
         
         <p className="dentist-instruction">
             Click on a dentist to book an appointment with them.
@@ -73,7 +73,7 @@ export default function DentistsPage() {
 
                 <div className="dentist-info-header">
                   <h3 className="dentist-name">{dentist.name}</h3>
-                  <span className="dentist-year">2026</span>
+                  <span className="dentist-year">{dentist.experienceYears} yrs</span>
                 </div>
                 
                 <p className="dentist-details">
