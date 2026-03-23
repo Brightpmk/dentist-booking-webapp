@@ -31,7 +31,7 @@ export default function AdminPage() {
                   <div className="value">All</div>
                 </div>
                 <div className="admin-stat">
-                  <div className="body-sm">System rule</div>
+                  <div className="body-sm">Access level</div>
                   <div className="value">Admin</div>
                 </div>
               </div>
@@ -40,7 +40,7 @@ export default function AdminPage() {
             <div className="info-stack">
               <div className="panel">
                 <div className="eyebrow">Management</div>
-                <h2 className="section-title">Operational Tools.</h2>
+                <h2 className="section-title">Operational Tools</h2>
                 <p className="body-lg">
                   Access and manage all clinic bookings directly.
                 </p>

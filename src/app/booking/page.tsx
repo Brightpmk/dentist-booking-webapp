@@ -121,7 +121,7 @@ export default function BookingPage() {
                     <div className="metric-label">{user?.role === 'admin' ? "Total Bookings" : "Your Active Booking"}</div>
                   </div>
                   <div className="metric-card">
-                    <div className="metric-value">LIVE</div>
+                    <div className="metric-value">Connected</div>
                     <div className="metric-label">API Status</div>
                   </div>
                 </div>

@@ -73,8 +73,7 @@ export default function HomePage() {
             <div className="info-card">
               <h3>Admin flow</h3>
               <p className="body-sm">
-                Admin users can manage dentists and review all bookings across
-                the clinic system.
+                Admin users can review and manage all bookings across the clinic system.
               </p>
             </div>
           </div>
