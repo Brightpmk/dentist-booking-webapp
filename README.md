@@ -39,7 +39,7 @@ A modern, high-performance web application built with **Next.js 15** for managin
 
 ### Prerequisites
 - Node.js 18+ 
-- Backend API running (see [Backend README](../dentist-backend/README.md))
+- Backend API running (see [Backend README](https://github.com/Brightpmk/dentist-backend/blob/main/README.md))
 
 ### Installation
 
