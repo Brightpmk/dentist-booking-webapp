@@ -45,7 +45,7 @@ A modern, high-performance web application built with **Next.js 15** for managin
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Brightpmk/dentist-booking-webapp.git
    cd fe-project-68-chawiss
    ```
 
